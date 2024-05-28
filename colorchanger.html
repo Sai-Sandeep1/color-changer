@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color changer</title>
+    <style>
+        img {
+            height: 20px;
+            width: 20px;
+        }
+
+        button {
+            margin: 30px;
+            border-radius: 50%;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <button onclick="change()"><img src="colorchanger.png" alt="colorchanger_button"></button>
+    <h1 class="tag">Hello There!</h1>
+    <h1 class="tag">How are You</h1>
+    <h1 class="tag">Glad to meet you</h1>
+    <script>
+        function change() {
+            let names = document.getElementsByClassName("tag")
+            if(document.body.style.backgroundColor == "red")
+            {
+                for(let i=0; i<names.length; i++)
+                {
+                    names[i].style.backgroundColor = "green";
+                    names[i].style.color = "red";
+                }
+                document.body.style.backgroundColor = "green";
+            }
+            else if (document.body.style.backgroundColor == "green")
+            {
+                for(let i=0; i<names.length; i++)
+                {
+                    names[i].style.backgroundColor = "blue";
+                    names[i].style.color = "green";
+                    
+                }
+                document.body.style.backgroundColor = "blue";
+            }
+            else 
+            {
+                for(let i=0; i<names.length; i++)
+                {
+                    names[i].style.backgroundColor = "red";
+                    names[i].style.color = "blue";
+                }
+                document.body.style.backgroundColor = "red";
+            }
+        }
+    </script>
+</body>
+</html>
